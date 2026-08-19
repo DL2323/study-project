@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head> <!-- то, чего не видит пользователь -->
+    <title>дюша лунце тест</title>
+        <style>
+        h1 {color: blue;
+           font-size: 30px;  
+           text-align: center;}
+        p  {
+            font-size: 36px;
+            color:green;
+            text-align: center;
+        }
+        body {
+            background-color: rgb(49, 0, 141);
+        }
+
+        ul {text-align: center;
+            list-style: none;
+            color: white;
+            padding: 0;
+            margin: 0;
+        } 
+        /* padding — отступ внутри элемента */
+            /* <!-- margin — отступ снаружи элемента */
+
+        a {
+    display: block;
+    text-align: center;
+    color: beige;
+}
+        img {
+            display: block;
+            margin:0 auto;
+            width: 300px;}
+       li {text-align: center;}
+
+    .container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        height: 150px;
+        align-items: center;
+    }
+
+    .container2 {
+        display: flex;
+        gap: 20px;
+        justify-content: space-around;
+
+    }
+    .box {
+         background-color: white;
+         color: black;
+         padding: 10px 20px;
+         border-radius: 8px;
+     }
+
+    </style>
+</head>
+<body> <!-- то, что видит -->
+    <h1>Я пишу текст</h1>
+    <p>теперь он есть здесь</p>
+    <ul> 
+        <li>люблю аришу</li>
+        <li>люблю дачу</li>
+        <li>люблю друзей и семью</li>
+    </ul>
+
+    <div class="container"> <!-- условная "папка", в которую можно поместить сразу несколько элементов -->
+        <div>мопсы </div>
+        <div> лабрадоры </div>
+        <div> пельмени </div>
+        </div>
+
+<a href="https://travelvesti.ru/news"> Вести Туризм</a> <!-- href — атрибут, указывающий, куда ведёт ссылка. -->
+<img src="1f1ea-1f1f8.png" alt="Испания"> <!-- img src - изображение. лучше, чтобы изображение лежало в папке проекта -->
+
+<div class="container2"> <!-- условная "папка", в которую можно поместить сразу несколько элементов -->
+        <div class="box">мопсы </div>
+        <div class="box"> лабрадоры </div>
+        <div class="box"> пельмени </div>
+        </div>
+
+<button>Нажми меня</button>
+
+<script> 
+      
+        const name ="Андрей";
+        let age =29;
+        let isVideoEditingFavorite = true;
+
+console.log(name, age, isVideoEditingFavorite);
+
+function checkFavorite (activity, isVideoEditingFavorite) {
+    if (isVideoEditingFavorite===true) {
+    console.log ("Я люблю монтировать видео"); }
+    else {
+console.log ("Пора найти новую работу:" + activity);
+    } 
+}
+checkFavorite ("разработка", false)
+
+let readers = ["Ариша", "Дюша", "Мама", "Папа"]
+let isOverdueList = [true, false, true, false]
+
+for (let i = 0; i < readers.length; i++) {
+    books(readers[i], isOverdueList[i]);
+}
+
+function books (readerName, isOverdue) {
+if (isOverdue===true) {
+    console.log (readerName + ", у вас штраф за просрочку");}
+    else { 
+console.log (readerName + ", штрафа нет");
+    }
+}
+
+
+
+function visitsPerMonth (guestName, isOver20) {
+if (isOver20===true) {
+    console.log (guestName + ", вам положена скидка");}
+    else {
+console.log (guestName + ", скидки нет");
+    }
+}
+
+visitsPerMonth ("Мария", true);
+visitsPerMonth ("Олег", false);
+
+let films = ["Матрица","Плохой фильм","Интерстеллар"]
+let score = [9, 4, 7]
+
+for (let i = 0; i < films.length; i++) {
+    bestfilm (films [i], score[i]);
+}
+
+function bestfilm (filmName, filmscore) {
+    if (filmscore>= 7) {
+        console.log (filmName + " рекомендуется к просмотру" );
+        }
+    else {
+            console.log (filmName + " не рекомендуется к просмотру" );
+        }
+    }
+
+
+let goroda = ["Москва","Сочи","Норильск"]
+let temperatura = [-5, 15, -20]
+for (let i = 0; i < goroda.length; i++) {
+pogoda (goroda [i], temperatura [i])}
+
+function pogoda (gorodName, isOver0) {
+    if (isOver0 >=0) {
+        console.log (gorodName + ": можно налегке");}
+    else {
+        console.log (gorodName + ": оденьтесь теплее");}
+    }
+
+let button = document.querySelector ("button");
+let heading = document.querySelector ("h1");
+
+button.addEventListener ("click", function () {
+    heading.textContent = "Клик сработал";
+    heading.style.color = "red";
+});
+
+</script>
+
+</body>
+</html>
+
